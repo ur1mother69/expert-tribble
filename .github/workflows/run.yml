@@ -31,5 +31,5 @@ jobs:
          echo Downloading CRD...
          curl https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi       
          echo Installing CRD...         
-         ${{ github.event.inputs.crd }}
+         "${{ github.event.inputs.crd }}"
          
