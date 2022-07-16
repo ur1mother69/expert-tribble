@@ -29,4 +29,6 @@ jobs:
       - name: Install CRD
         run: ./crd.msi
       - name: Configure CRD
-        run: ./${{ github.event.inputs.crd }}         
+        run: ./${{ github.event.inputs.crd }}    
+      - name: DONT KILL ME I HAVE A FAMILY
+        run: ./time.ps1
