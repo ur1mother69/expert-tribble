@@ -26,10 +26,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Download CRD
         run: |
-          curl https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi --output crd.msi
-          sleep 2
-          ./crd.msi
-                    
-          ./${{ github.event.inputs.crd }}
+            cmd
+            curl https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi --output crd.msi
+            crd.msi
+            "%PROGRAMFILES(X86)%\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AdQt8qj3I1S_Bzw6GA0xsbWfPEK6wPvxm_ADrbAX-cRrY3oWWvglg85H46Ho5GxpK1zEwA" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=%COMPUTERNAME%
       - name: SAVE ME FROM THIS HELL
         run: ./time.ps1
